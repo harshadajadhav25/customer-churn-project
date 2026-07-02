@@ -8,14 +8,18 @@ This project predicts customer churn using machine learning techniques. The work
 ```
 customer-churn-project/
 │
-├── Customer Churn.csv
-├── 01_Data_Cleaning.ipynb
-├── 02_EDA.ipynb
-├── 03_Model_Building.ipynb
-├── 04_Model_Evaluation.ipynb
+├── data/
+│   └── raw/
+│       └── customer_churn.csv
+│
+├── notebooks/
+│   ├── 01_eda_and_data_understanding.ipynb
+│   ├── 02_feature_engineering.ipynb
+│   ├── 03_model_training_and_evaluation.ipynb
+│   └── 04_kpi_analysis_and_business_insights.ipynb
+│
+├── README.md
 ├── requirements.txt
-├── .gitignore
-└── README.md
 ```
 
 ## Technologies Used
