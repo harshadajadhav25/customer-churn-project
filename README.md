@@ -1,11 +1,16 @@
-# Customer Churn Prediction
+# Customer Churn Prediction using Machine Learning
 
 ## Project Overview
-This project predicts customer churn using machine learning techniques. The workflow includes data cleaning, exploratory data analysis (EDA), feature engineering, model building, and model evaluation.
+
+Customer churn is a major challenge for businesses because retaining existing customers is often more cost-effective than acquiring new ones. This project develops a machine learning pipeline to predict whether a customer is likely to churn based on customer demographics, purchasing behavior, engagement, and service-related features.
+
+The project covers the complete machine learning workflow, including data preprocessing, feature engineering, exploratory data analysis (EDA), model training, evaluation, and business insights.
+
+---
 
 ## Project Structure
 
-```
+```text
 customer-churn-project/
 │
 ├── data/
@@ -18,9 +23,17 @@ customer-churn-project/
 │   ├── 03_model_training_and_evaluation.ipynb
 │   └── 04_kpi_analysis_and_business_insights.ipynb
 │
-├── README.md
+├── images/
+│   ├── feature_importance.png
+│   ├── confusion_matrix.png
+│   └── roc_curve.png
+│
 ├── requirements.txt
+├── .gitignore
+└── README.md
 ```
+
+---
 
 ## Technologies Used
 
@@ -28,46 +41,93 @@ customer-churn-project/
 - Pandas
 - NumPy
 - Matplotlib
-- Seaborn
 - Scikit-learn
 - Jupyter Notebook
 
-## Workflow
+---
 
-1. Data Cleaning
-2. Exploratory Data Analysis
-3. Feature Engineering
-4. Model Training
-5. Model Evaluation
+## Machine Learning Workflow
 
-## Dataset
+- Data Cleaning
+- Exploratory Data Analysis (EDA)
+- Feature Engineering
+- Feature Scaling
+- Model Training
+- Model Evaluation
+- Business Insights
 
-The project uses a customer churn dataset containing customer demographics, account information, and service usage details.
+---
 
 ## Machine Learning Models
 
 - Logistic Regression
-- Decision Tree
-- Random Forest
+- Logistic Regression (Balanced Class Weights)
+- Random Forest Classifier
+- Random Forest with Threshold Optimization
 
-*(Update this section if you used different models.)*
+---
 
-## Results
+## Model Performance
 
-The models were evaluated using standard classification metrics such as:
+| Model | Accuracy | Precision | Recall | ROC-AUC |
+|-------|---------:|----------:|--------:|--------:|
+| Logistic Regression | 0.803 | 0.000 | 0.000 | 0.498 |
+| Balanced Logistic Regression | 0.495 | 0.190 | 0.479 | 0.499 |
+| Random Forest | 0.803 | 0.000 | 0.000 | 0.518 |
+| Random Forest (Threshold = 0.30) | 0.788 | 0.263 | 0.042 | 0.518 |
+| Random Forest (Threshold = 0.25) | 0.729 | 0.238 | 0.169 | 0.518 |
 
-- Accuracy
-- Precision
-- Recall
-- F1 Score
-- Confusion Matrix
+---
+
+## Feature Importance
+
+The Random Forest model identified the most influential features contributing to customer churn.
+
+<p align="center">
+    <img src="images/feature_importance.png" width="800">
+</p>
+
+---
+
+## Confusion Matrix
+
+The confusion matrix summarizes the model's classification performance by comparing predicted and actual customer churn.
+
+<p align="center">
+    <img src="images/confusion_matrix.png" width="500">
+</p>
+
+---
+
+## ROC Curve
+
+The ROC Curve illustrates the trade-off between the True Positive Rate and False Positive Rate across different classification thresholds.
+
+<p align="center">
+    <img src="images/roc_curve.png" width="600">
+</p>
+
+---
+
+## Key Findings
+
+- Class imbalance significantly affected baseline model performance.
+- Applying balanced class weights improved churn detection.
+- Threshold tuning increased recall for churn prediction while reducing overall accuracy.
+- Random Forest identified the most influential features affecting customer churn.
+- Model evaluation highlighted the trade-off between precision and recall.
+
+---
 
 ## Future Improvements
 
-- Hyperparameter tuning
-- Feature selection
-- Deployment using Flask or Streamlit
-- Model monitoring
+- Hyperparameter tuning using GridSearchCV
+- Cross-validation
+- XGBoost and LightGBM implementation
+- Model deployment using Flask or Streamlit
+- Real-time churn prediction dashboard
+
+---
 
 ## Author
 
