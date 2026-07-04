@@ -1,17 +1,40 @@
-# Customer Churn Prediction using Machine Learning
+# 📊 Customer Churn Prediction using Machine Learning
 
-## Project Overview
-
-Customer churn is one of the biggest challenges faced by businesses, as retaining existing customers is significantly more cost-effective than acquiring new ones. This project develops an end-to-end machine learning pipeline to predict customer churn using customer demographics, purchasing behavior, engagement metrics, and service-related features.
-
-The project covers the complete data science lifecycle, including data preprocessing, feature engineering, exploratory data analysis (EDA), predictive modeling, model evaluation, and business KPI analysis to support data-driven customer retention strategies.
+> 💻 **GitHub Repository:**  
+> https://github.com/harshadajadhav25/customer-churn-project
 
 ---
 
-## Project Structure
+# Project Overview
+
+Customer churn is one of the biggest challenges faced by businesses, as retaining existing customers is significantly more cost-effective than acquiring new ones.
+
+This project develops an end-to-end Machine Learning pipeline to predict customer churn using customer demographics, purchasing behavior, engagement metrics, and service-related features.
+
+The project covers the complete data science lifecycle, including:
+
+- Data Cleaning
+- Exploratory Data Analysis (EDA)
+- Feature Engineering
+- Machine Learning Model Development
+- Model Evaluation
+- Business KPI Analysis
+- Interactive Streamlit Dashboard
+
+---
+
+# Project Structure
 
 ```text
 customer-churn-project/
+│
+├── app.py
+│
+├── models/
+│   ├── random_forest_model.pkl
+│   ├── scaler.pkl
+│   ├── model_features.pkl
+│   └── numeric_columns.pkl
 │
 ├── data/
 │   └── raw/
@@ -31,6 +54,7 @@ customer-churn-project/
 │   ├── churn_by_membership.png
 │   └── revenue_at_risk.png
 │
+├── requirements.txt
 ├── .gitignore
 └── README.md
 ```
@@ -44,6 +68,7 @@ customer-churn-project/
 - NumPy
 - Matplotlib
 - Scikit-learn
+- Streamlit
 - Jupyter Notebook
 
 ---
@@ -51,21 +76,22 @@ customer-churn-project/
 # Machine Learning Workflow
 
 - Data Cleaning
-- Exploratory Data Analysis (EDA)
+- Exploratory Data Analysis
 - Feature Engineering
 - Feature Scaling
 - Model Training
 - Model Evaluation
 - Business KPI Analysis
+- Streamlit Dashboard Development
 
 ---
 
 # Machine Learning Models
 
 - Logistic Regression
-- Logistic Regression (Balanced Class Weights)
+- Logistic Regression (Balanced)
 - Random Forest Classifier
-- Random Forest with Threshold Optimization
+- Random Forest (Threshold Optimization)
 
 ---
 
@@ -83,39 +109,37 @@ customer-churn-project/
 
 # Feature Importance
 
-The Random Forest model identified the most influential features contributing to customer churn prediction.
+The Random Forest model identified the most influential features affecting customer churn.
 
 <p align="center">
-    <img src="images/feature_importance.png" width="800">
+<img src="images/feature_importance.png" width="800">
 </p>
 
 ---
 
 # Confusion Matrix
 
-The confusion matrix summarizes the model's classification performance by comparing predicted and actual customer churn outcomes.
+The confusion matrix summarizes the model's classification performance.
 
 <p align="center">
-    <img src="images/confusion_matrix.png" width="500">
+<img src="images/confusion_matrix.png" width="500">
 </p>
 
 ---
 
 # ROC Curve
 
-The ROC Curve illustrates the trade-off between the True Positive Rate (Sensitivity) and False Positive Rate across different classification thresholds.
+The ROC Curve illustrates the trade-off between True Positive Rate and False Positive Rate across classification thresholds.
 
 <p align="center">
-    <img src="images/roc_curve.png" width="600">
+<img src="images/roc_curve.png" width="650">
 </p>
 
 ---
 
 # Business Insights
 
-The KPI analysis translates machine learning predictions into actionable business insights by identifying high-risk customer segments and estimating their potential financial impact.
-
----
+The KPI analysis converts machine learning predictions into actionable business insights by identifying high-risk customer segments and estimating potential revenue impact.
 
 ## Business KPI Summary
 
@@ -131,43 +155,72 @@ The KPI analysis translates machine learning predictions into actionable busines
 
 ## Customer Churn Distribution
 
-Approximately one out of every five customers has churned, highlighting a significant opportunity for targeted customer retention strategies.
+Approximately one out of every five customers churned, highlighting a significant customer retention opportunity.
 
 <p align="center">
-    <img src="images/churn_distribution.png" width="450">
+<img src="images/churn_distribution.png" width="450">
 </p>
 
 ---
 
 ## Customer Churn Rate by Membership Status
 
-Silver and Bronze membership tiers experience the highest churn rates, indicating that these customer groups require greater attention from retention and loyalty programs.
+Silver and Bronze membership tiers exhibited the highest churn rates.
 
 <p align="center">
-    <img src="images/churn_by_membership.png" width="650">
+<img src="images/churn_by_membership.png" width="650">
 </p>
 
 ---
 
 ## Revenue at Risk by Membership
 
-Bronze membership customers contribute the largest share of potential revenue at risk, followed by Silver members. Prioritizing these segments can maximize the financial impact of retention efforts.
+Bronze customers contribute the highest potential revenue at risk.
 
 <p align="center">
-    <img src="images/revenue_at_risk.png" width="650">
+<img src="images/revenue_at_risk.png" width="650">
 </p>
+
+---
+
+# Interactive Streamlit Dashboard
+
+The project also includes a fully interactive Streamlit application.
+
+### Dashboard Features
+
+- Predict customer churn probability
+- Calculate Customer Risk Index
+- Display Business KPIs
+- Visualize Feature Importance
+- View Customer Churn Distribution
+- Analyze Revenue at Risk
+- Provide Business Recommendations
+- Interactive and user-friendly interface
+
+---
+
+# Customer Risk Index
+
+The dashboard introduces a **Customer Risk Index**, combining:
+
+- Machine Learning Churn Probability
+- Customer Engagement Score
+- Service Risk Score
+
+This provides a more business-oriented assessment than relying solely on the machine learning model.
 
 ---
 
 # Key Findings
 
-- Approximately **19.7%** of customers churned, indicating a meaningful customer retention opportunity.
-- Customer churn is strongly influenced by behavioral, engagement, and service-related features.
-- Random Forest identified the most influential predictors affecting churn.
-- Class imbalance significantly impacted baseline model performance, making threshold optimization essential.
+- Approximately **19.7%** of customers churned.
+- Customer churn is highly influenced by behavioral and service-related features.
+- Random Forest identified the most important predictors affecting churn.
+- Class imbalance significantly impacted baseline model performance.
 - Bronze and Silver membership tiers exhibited the highest churn rates.
-- Bronze customers represented the highest amount of revenue at risk.
-- Predictive analytics can help businesses proactively identify at-risk customers and improve retention strategies.
+- Bronze customers represented the highest revenue at risk.
+- Customer Risk Index combines predictive analytics with business logic for better decision support.
 
 ---
 
@@ -175,11 +228,40 @@ Bronze membership customers contribute the largest share of potential revenue at
 
 This project demonstrates how machine learning can help organizations:
 
-- Predict customers who are likely to churn.
-- Identify high-risk customer segments.
-- Estimate potential revenue at risk.
-- Support targeted customer retention campaigns.
-- Improve customer lifetime value through data-driven decision-making.
+- Predict customer churn
+- Identify high-risk customer segments
+- Estimate potential revenue at risk
+- Improve customer retention strategies
+- Support business decision-making
+- Increase customer lifetime value
+
+---
+
+# Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/harshadajadhav25/customer-churn-project.git
+```
+
+Move into the project
+
+```bash
+cd customer-churn-project
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the Streamlit dashboard
+
+```bash
+streamlit run app.py
+```
 
 ---
 
@@ -188,9 +270,11 @@ This project demonstrates how machine learning can help organizations:
 - Hyperparameter tuning using GridSearchCV
 - Cross-validation
 - XGBoost and LightGBM implementation
-- Model deployment using Flask or Streamlit
-- Real-time churn prediction dashboard
-- Interactive business dashboard using Power BI or Tableau
+- SHAP Explainable AI
+- Docker containerization
+- Cloud deployment
+- Power BI integration
+- REST API deployment
 
 ---
 
