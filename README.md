@@ -1,4 +1,7 @@
-# 📊 Customer Churn Prediction using Machine Learning
+# 📊 Customer Churn Prediction Dashboard
+
+> 🚀 **Live Demo:**  
+> https://customer-churn-ml-dashboard.streamlit.app/
 
 > 💻 **GitHub Repository:**  
 > https://github.com/harshadajadhav25/customer-churn-project
@@ -7,9 +10,9 @@
 
 # Project Overview
 
-Customer churn is one of the biggest challenges faced by businesses, as retaining existing customers is significantly more cost-effective than acquiring new ones.
+Customer churn is one of the biggest challenges businesses face because retaining existing customers is significantly more cost-effective than acquiring new ones.
 
-This project develops an end-to-end Machine Learning pipeline to predict customer churn using customer demographics, purchasing behavior, engagement metrics, and service-related features.
+This project develops an end-to-end Machine Learning solution that predicts customer churn using customer demographics, purchasing behavior, engagement metrics, and service-related features.
 
 The project covers the complete data science lifecycle, including:
 
@@ -20,6 +23,23 @@ The project covers the complete data science lifecycle, including:
 - Model Evaluation
 - Business KPI Analysis
 - Interactive Streamlit Dashboard
+
+---
+
+# Live Application
+
+The deployed Streamlit application allows users to:
+
+- Predict customer churn probability
+- Calculate a Customer Risk Index
+- View Business KPIs
+- Explore Business Insights
+- Analyze Customer Behavior
+- Receive Customer Retention Recommendations
+
+🔗 **Live Dashboard**
+
+https://customer-churn-ml-dashboard.streamlit.app/
 
 ---
 
@@ -55,8 +75,8 @@ customer-churn-project/
 │   └── revenue_at_risk.png
 │
 ├── requirements.txt
-├── .gitignore
-└── README.md
+├── README.md
+└── .gitignore
 ```
 
 ---
@@ -91,7 +111,7 @@ customer-churn-project/
 - Logistic Regression
 - Logistic Regression (Balanced)
 - Random Forest Classifier
-- Random Forest (Threshold Optimization)
+- Random Forest with Threshold Optimization
 
 ---
 
@@ -109,27 +129,27 @@ customer-churn-project/
 
 # Feature Importance
 
-The Random Forest model identified the most influential features affecting customer churn.
+The Random Forest model identified the most influential features contributing to customer churn.
 
 <p align="center">
-<img src="images/feature_importance.png" width="800">
+<img src="images/feature_importance.png" width="850">
 </p>
 
 ---
 
 # Confusion Matrix
 
-The confusion matrix summarizes the model's classification performance.
+The confusion matrix summarizes the classification performance of the model.
 
 <p align="center">
-<img src="images/confusion_matrix.png" width="500">
+<img src="images/confusion_matrix.png" width="550">
 </p>
 
 ---
 
 # ROC Curve
 
-The ROC Curve illustrates the trade-off between True Positive Rate and False Positive Rate across classification thresholds.
+The ROC Curve illustrates the trade-off between the True Positive Rate and False Positive Rate across classification thresholds.
 
 <p align="center">
 <img src="images/roc_curve.png" width="650">
@@ -139,7 +159,7 @@ The ROC Curve illustrates the trade-off between True Positive Rate and False Pos
 
 # Business Insights
 
-The KPI analysis converts machine learning predictions into actionable business insights by identifying high-risk customer segments and estimating potential revenue impact.
+The KPI analysis converts machine learning predictions into actionable business insights.
 
 ## Business KPI Summary
 
@@ -165,7 +185,7 @@ Approximately one out of every five customers churned, highlighting a significan
 
 ## Customer Churn Rate by Membership Status
 
-Silver and Bronze membership tiers exhibited the highest churn rates.
+Silver and Bronze membership tiers exhibit the highest churn rates.
 
 <p align="center">
 <img src="images/churn_by_membership.png" width="650">
@@ -175,7 +195,7 @@ Silver and Bronze membership tiers exhibited the highest churn rates.
 
 ## Revenue at Risk by Membership
 
-Bronze customers contribute the highest potential revenue at risk.
+Bronze customers contribute the highest amount of potential revenue at risk.
 
 <p align="center">
 <img src="images/revenue_at_risk.png" width="650">
@@ -185,42 +205,37 @@ Bronze customers contribute the highest potential revenue at risk.
 
 # Interactive Streamlit Dashboard
 
-The project also includes a fully interactive Streamlit application.
-
-### Dashboard Features
+The project includes an interactive Streamlit application where users can:
 
 - Predict customer churn probability
-- Calculate Customer Risk Index
-- Display Business KPIs
-- Visualize Feature Importance
-- View Customer Churn Distribution
-- Analyze Revenue at Risk
-- Provide Business Recommendations
-- Interactive and user-friendly interface
+- Calculate a Customer Risk Index
+- Explore customer risk factors
+- View business KPIs
+- Review model insights
+- Receive retention recommendations
 
 ---
 
 # Customer Risk Index
 
-The dashboard introduces a **Customer Risk Index**, combining:
+Besides the machine learning prediction, the application calculates a **Customer Risk Index**, which combines:
 
 - Machine Learning Churn Probability
 - Customer Engagement Score
 - Service Risk Score
 
-This provides a more business-oriented assessment than relying solely on the machine learning model.
+This provides a more business-oriented assessment by combining predictive analytics with business-driven customer behavior indicators.
 
 ---
 
 # Key Findings
 
 - Approximately **19.7%** of customers churned.
-- Customer churn is highly influenced by behavioral and service-related features.
-- Random Forest identified the most important predictors affecting churn.
-- Class imbalance significantly impacted baseline model performance.
+- Customer churn is strongly influenced by behavioral and service-related features.
+- Random Forest identified the most influential features affecting churn.
 - Bronze and Silver membership tiers exhibited the highest churn rates.
 - Bronze customers represented the highest revenue at risk.
-- Customer Risk Index combines predictive analytics with business logic for better decision support.
+- The Customer Risk Index complements machine learning predictions by incorporating engagement and service quality into the final risk assessment.
 
 ---
 
@@ -230,10 +245,10 @@ This project demonstrates how machine learning can help organizations:
 
 - Predict customer churn
 - Identify high-risk customer segments
-- Estimate potential revenue at risk
-- Improve customer retention strategies
-- Support business decision-making
-- Increase customer lifetime value
+- Estimate revenue at risk
+- Support customer retention strategies
+- Improve customer lifetime value
+- Enable data-driven business decisions
 
 ---
 
@@ -251,13 +266,13 @@ Move into the project
 cd customer-churn-project
 ```
 
-Install dependencies
+Install the required dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run the Streamlit dashboard
+Run the Streamlit application
 
 ```bash
 streamlit run app.py
@@ -269,15 +284,22 @@ streamlit run app.py
 
 - Hyperparameter tuning using GridSearchCV
 - Cross-validation
-- XGBoost and LightGBM implementation
+- XGBoost implementation
+- LightGBM implementation
 - SHAP Explainable AI
 - Docker containerization
-- Cloud deployment
-- Power BI integration
-- REST API deployment
+- Cloud deployment using AWS or Azure
+- REST API integration
+- Power BI Dashboard integration
 
 ---
 
 # Author
 
 **Harshada Jadhav**
+
+GitHub:
+https://github.com/harshadajadhav25
+
+Live Demo:
+https://customer-churn-ml-dashboard.streamlit.app/
