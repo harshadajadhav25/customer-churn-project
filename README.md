@@ -31,7 +31,6 @@ customer-churn-project/
 │   ├── churn_by_membership.png
 │   └── revenue_at_risk.png
 │
-├── requirements.txt
 ├── .gitignore
 └── README.md
 ```
